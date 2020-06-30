@@ -1,0 +1,336 @@
+@charset "UTF-8";
+/*모바일 CSS*/
+/*게시판*/
+.board-section{
+	width: 95%;
+	margin: 18px auto;
+}
+.board-section .sec-tit{
+	font-size: 20px;
+}
+.board-section .content-row-1{
+	margin-top:20px;
+}
+.board-section .content-row-1 .likes-span{
+	font-size: 0.5rem;
+	color:#fe5050;
+}
+.board-section .content-row-1 .pc-table{
+	display: none;
+}
+.board-section .content-row-1 .mobile-table{
+	display: table;
+}
+.board-section .content-row-1 table {
+	border-top:2px solid gray;
+	border-bottom: 2px solid gray;
+}
+.board-section .content-row-1 .best-span{
+	background: #eeeeee;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	font-size: 0.6rem;
+	padding: 2px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+.board-section .content-row-1 table .best-tr{
+	background: #f8f8f8;
+}
+.board-section .content-row-1 .mobile-table tr:nth-child(even) td{
+	border-bottom: 1px solid lightgray;
+	font-size:0.7rem;
+	color:gray;
+	padding: 5px 0;
+	text-align: right;
+}
+.board-section .content-row-1 .mobile-table tr:last-child td{
+	border-bottom: 0;
+}
+.board-section .content-row-1 .mobile-table tr:nth-child(odd) td{
+	font-size:1rem;
+	padding-top:5px;
+}
+
+.board-section .content-row-2{
+	display:inline-flex;
+	width:100%;
+	height:30px;
+	margin-top: 10px;
+	justify-content: space-between;
+}
+.board-section .content-row-2 button{
+	width:70px;
+	height:30px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+.board-section .content-row-2 .search-div{
+	display:inline-flex;
+	border:1px solid gray;
+	background: #ffffff;
+}
+.board-section .content-row-2 .search-div input, .board-section .content-row-2 .search-div select{
+	border:0;
+}
+.board-section .content-row-2 .search-div input:last-child{
+	width:30px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+.board-section .content-row-3{
+	margin-top:15px;
+	text-align: center;
+}
+.board-section .content-row-3 .info a{
+	background:#f1f1f1;
+	font-weight:bold;
+	pointer-events: none;
+	cursor: default;
+}
+.board-section .content-row-3 li{
+	padding: 0 3px;
+}
+.board-section .content-row-3 li a{
+	padding: 5px 10px;
+	border: 1px solid lightgray;
+}
+
+/*글쓰기&글수정*/
+.alter-article-section{
+	width: 95%;
+	margin: 18px auto;
+}
+.alter-article-section .content-row-1{
+	display: inline-flex;
+	height: 30px;
+	width: 100%;
+	border:1px solid lightgray;
+}
+.alter-article-section .content-row-1 select{
+	width: 50px;
+	border:0;
+}
+.alter-article-section .content-row-1 input{
+	padding-left:10px;
+	width: 100%;
+	border:0;
+}
+.alter-article-section .content-row-2{
+	margin-top:15px;
+}
+.alter-article-section .content-row-3{
+	margin-top:15px;
+	height:30px;
+	width: 100%;
+	text-align: right;
+}
+.alter-article-section .content-row-3 input{
+	width:60px;
+	height:30px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+
+/*게시글*/
+.article-section{
+	width: 95%;
+	margin: 18px auto;
+}
+.article-section .content-row-1 .pc-table{
+	display: none;
+}
+.article-section .content-row-1 .mobile-table{
+	display: table;
+}
+.article-section .content-row-1 thead{
+	border-bottom:1px solid lightgray;
+}
+.article-section .content-row-1 thead th{
+	font-size:1rem;
+	text-align: left;
+}
+.article-section .content-row-1 thead th .title-span{
+	font-size:0.9rem;
+	color:gray;
+}
+.article-section .content-row-1 thead td{
+	font-size: 0.8rem;
+	text-align: right;
+	padding: 10px 0;
+}
+.article-section .content-row-1 tbody td{
+	height: 400px;
+	padding-top:10px;
+}
+.article-section .content-row-1 tbody td img, .article-section .content-row-1 tbody td iframe{
+	max-width: 100%;
+}
+.article-section .content-row-2{
+	margin-top:21px;
+	text-align: center;
+}
+.article-section .content-row-2 button{
+	color:#fe5050;
+	width:70px;
+	height:30px;
+	font-size:1rem;
+	border:1px solid #fe5050;
+	background:transparent;
+	border-radius: 5px;
+}
+.article-section .content-row-3{
+	margin-top:10px;
+	text-align: right;
+}
+.article-section .content-row-3 form{
+	display:inline;
+}
+.article-section .content-row-3 input{
+	width:auto;
+	padding:0 5px;
+	height:30px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+.article-section .content-row-4{
+	margin-top:21px;
+}
+
+.article-section .content-row-4 .article-pre{
+	background:transparent;
+	border: 0;
+	padding:0;
+	line-height: 1.2;
+	font-size: 0.8rem;
+	white-space: pre-wrap;
+}
+.article-section .content-row-4 table .nothing-tr td{
+	padding:5px;
+	border-bottom:1px solid lightgray;
+	font-size: 0.8rem;
+}
+.article-section .content-row-4 thead tr:first-child td{
+	font-size:1rem;
+	font-weight:bold;
+	text-align:left;
+	height:40px;
+	width:20%;
+	vertical-align:middle;
+	border:1px solid lightgray;
+	border-bottom: 2px double lightgray;
+	border-right: 2px double lightgray;
+	background: #f8f8f8;
+}
+.article-section .content-row-4 tbody .title-tr td{
+	padding-top:10px;
+}
+.article-section .content-row-4 tbody .title-tr td:first-child{
+	border-bottom:1px solid lightgray;
+}
+.article-section .content-row-4 tbody .title-tr img{
+	width:60px;
+	height:60px;
+	border:1px solid lightgray;
+	padding:1px;
+	border-radius: 30px;
+}
+.article-section .content-row-4 tbody .title-tr .date-span{
+	color:gray;
+	font-size:0.8rem;
+}
+.article-section .content-row-4 tbody .content-tr td{
+	padding: 10px 0;
+}
+.article-section .content-row-4 tbody .function-tr{
+	text-align: right;
+}
+.article-section .content-row-4 tbody .function-tr form{
+	display: inline;
+}
+.article-section .content-row-4 tbody .function-tr form:last-child{
+	display: block;
+	margin-top:10px;
+}
+.article-section .content-row-4 tbody .function-tr form:last-child textarea{
+	width: 100%;
+}
+.article-section .content-row-4 tbody .function-tr form:last-child input{
+	width:60px;
+	height:30px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+.article-section .content-row-4 tbody .function-tr button, .article-section .content-row-4 tbody .function-tr input{
+	border:0;
+	background: transparent;
+	color:gray;
+	font-size: 0.7rem;
+}
+.article-section .content-row-4 tbody .function-tr td{
+	padding-bottom:10px;
+	border-bottom: 1px solid lightgray;
+}
+.article-section .content-row-5{
+	margin-top:21px;
+}
+.article-section .content-row-5 form{
+	text-align: right;
+}
+.article-section .content-row-5 form textarea{
+	width:100%;
+}
+.article-section .content-row-5 form input{
+	width:60px;
+	height:30px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+
+/*태블릿 CSS*/
+@media all and (min-width:768px){
+/*게시판*/
+.board-section .content-row-1 .best-span{
+	background: #eeeeee;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	font-size: 0.7rem;
+	padding: 3px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+.board-section .content-row-1 .pc-table{
+	display: table;
+}
+.board-section .content-row-1 .mobile-table{
+	display: none;
+}
+.board-section .content-row-1 .pc-table tr{
+	border-bottom: 1px solid lightgray;
+	text-align: center;
+}
+.board-section .content-row-1 .pc-table tr th{
+	padding: 15px 0;
+	border-bottom: 3px double lightgray;
+}
+.board-section .content-row-1 .pc-table tr td{
+	padding: 10px 0;
+}
+.board-section .content-row-1 .pc-table tr td:nth-child(2){
+	text-align:left;
+}
+
+/*게시글*/
+.article-section .content-row-1 .pc-table{
+	display: table;
+}
+.article-section .content-row-1 .mobile-table{
+	display: none;
+}
+}

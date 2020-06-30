@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <interface id="1" language="java" name="com.mycommunity.board.controller.BoardController" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/board/controller/BoardController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="522" x="6015" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="com.mycommunity.common.file.FileDownloadController" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/file/FileDownloadController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="269" x="170" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.mycommunity.member.dao.MemberDAOImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/member/dao/MemberDAOImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="387" width="240" x="1021" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.mycommunity.admin.member.service.AdminMemberServiceImpl" 
+    project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/member/service/AdminMemberServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="297" width="271" x="497" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="com.mycommunity.member.controller.MemberController" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/member/controller/MemberController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="333" width="495" x="5265" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="com.mycommunity.admin.board.service.AdminBoardServiceImpl" 
+    project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/board/service/AdminBoardServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="320" x="3167" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.mycommunity.common.vo.PageMaker" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/vo/PageMaker.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="459" width="144" x="1929" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.mycommunity.member.service.MemberServiceImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/member/service/MemberServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="369" width="240" x="1485" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.mycommunity.common.exception.AuthenticationException" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/exception/AuthenticationException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="178" x="479" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.mycommunity.member.vo.MemberVO" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/member/vo/MemberVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="837" width="175" x="5800" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="11" language="java" name="com.mycommunity.admin.board.dao.AdminBoardDAO" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/board/dao/AdminBoardDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="320" x="2659" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="12" language="java" name="com.mycommunity.admin.member.dao.AdminMemberDAO" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/member/dao/AdminMemberDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="279" width="287" x="334" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="13" language="java" name="com.mycommunity.admin.board.controller.AdminBoardController" 
+    project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/board/controller/AdminBoardController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="491" x="4535" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="14" language="java" name="com.mycommunity.admin.board.service.AdminBoardService" 
+    project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/board/service/AdminBoardService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="320" x="3602" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="15" language="java" name="com.mycommunity.common.mailService.MailService" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/mailService/MailService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="220" x="3342" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="16" language="java" name="com.mycommunity.member.dao.MemberDAO" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/member/dao/MemberDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="240" x="1253" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="17" language="java" name="com.mycommunity.common.scheduler.Scheduler" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/scheduler/Scheduler.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="808" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="com.mycommunity.board.vo.ReplyVO" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/board/vo/ReplyVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="531" width="143" x="697" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="com.mycommunity.admin.member.service.AdminMemberService" 
+    project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/member/service/AdminMemberService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="279" width="271" x="808" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="20" language="java" name="com.mycommunity.common.mailService.MailServiceImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/mailService/MailServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="223" x="3898" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="com.mycommunity.main.MainController" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/main/MainController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="331" x="3527" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="com.mycommunity.common.interceptor.ViewNameInterceptor" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/interceptor/ViewNameInterceptor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="356" x="1765" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="com.mycommunity.admin.board.controller.AdminBoardControllerImpl" 
+    project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/board/controller/AdminBoardControllerImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="491" x="4734" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="com.mycommunity.member.controller.MemberControllerImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/member/controller/MemberControllerImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="405" width="495" x="5265" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="25" language="java" name="com.mycommunity.board.dao.BoardDAO" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/board/dao/BoardDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="423" width="283" x="2336" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="26" language="java" name="com.mycommunity.board.service.BoardService" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/board/service/BoardService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="423" width="283" x="3019" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="27" language="java" name="com.mycommunity.board.dao.BoardDAOImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/board/dao/BoardDAOImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="477" width="283" x="2161" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="com.mycommunity.admin.board.dao.AdminBoardDAOImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/board/dao/AdminBoardDAOImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="320" x="2484" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="com.mycommunity.common.exception.ExceptionController" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/exception/ExceptionController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="364" x="880" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="com.mycommunity.admin.board.vo.AdminBoardVO" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/board/vo/AdminBoardVO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="747" width="159" x="5066" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="com.mycommunity.admin.member.dao.AdminMemberDAOImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/member/dao/AdminMemberDAOImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="315" width="287" x="170" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <annotation id="32" language="java" name="com.mycommunity.common.annotation.AdminOnly" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/annotation/AdminOnly.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="63" width="176" x="1284" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </annotation>  
+  <class id="33" language="java" name="com.mycommunity.common.exception.AuthorizationException" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/exception/AuthorizationException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="173" x="1500" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="com.mycommunity.board.service.BoardServiceImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/board/service/BoardServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="441" width="283" x="2844" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="35" language="java" name="com.mycommunity.admin.member.controller.AdminMemberController" 
+    project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/member/controller/AdminMemberController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="533" x="3962" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="36" language="java" name="com.mycommunity.board.vo.BoardVO" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/board/vo/BoardVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="693" width="137" x="6577" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <annotation id="37" language="java" name="com.mycommunity.common.annotation.LoginRequired" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/annotation/LoginRequired.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="63" width="176" x="1713" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </annotation>  
+  <class id="38" language="java" name="com.mycommunity.admin.member.controller.AdminMemberControllerImpl" 
+    project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/admin/member/controller/AdminMemberControllerImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="533" x="4161" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="com.mycommunity.common.base.BaseController" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/base/BaseController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="390" x="4422" y="-49"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="com.mycommunity.common.vo.PageCriteria" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/common/vo/PageCriteria.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="333" width="144" x="1301" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="41" language="java" name="com.mycommunity.member.service.MemberService" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/member/service/MemberService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="351" width="240" x="1765" y="1039"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="42" language="java" name="com.mycommunity.board.controller.BoardControllerImpl" project="Project01_0416" 
+    file="/Project01_0416/src/main/java/com/mycommunity/board/controller/BoardControllerImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="459" width="522" x="6015" y="522"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="43">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="39"/>  
+  </generalization>  
+  <realization id="44">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <association id="45">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="46" name="adminBoardService"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="48">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="49">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="50" name="adminMemberService"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="52">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="53">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="39"/>  
+  </generalization>  
+  <association id="54">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="55" name="memberDAO"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="57">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="58">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="59" name="boardVO"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="61">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="62" name="adminMemberDao"/>      
+      <multiplicity id="63" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="64">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <generalization id="65">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="39"/>  
+  </generalization>  
+  <association id="66">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="67" name="adminBoardVO"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="69">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="25"/>  
+  </realization>  
+  <association id="70">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="71" name="adminBoardDao"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="73">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="74" name="boardDAO"/>      
+      <multiplicity id="75" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="76">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="77">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="78" name="boardService"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="80">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="41"/>  
+  </realization>  
+  <association id="81">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="82" name="cri"/>      
+      <multiplicity id="83" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="84">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="85" name="boardService"/>      
+      <multiplicity id="86" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="87">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <association id="88">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="89" name="mailService"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="91">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="92">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="39"/>  
+  </generalization>  
+  <realization id="93">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <realization id="94">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="95">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="96" name="memberService"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="99" name="memberService"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="101">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <association id="102">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="103" name="adminMemberService"/>      
+      <multiplicity id="104" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="105">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="106" name="memberVO"/>      
+      <multiplicity id="107" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="mapper.admin.board">
+	
+	<select id="getRankedMemberList" resultType="memberVO">
+			<![CDATA[select * from 
+						(select mem.*, rank() over(order by totalPoint desc) as rank from 
+									(select * from c_member) mem) 
+					where rownum <= 101 and nickname != 'admin'
+			]]>
+			<if test="searchCategory != null and searchCategory != '' ">
+				and ${searchCategory} like '%' || #{searchWord} || '%'
+			</if>
+	</select>
+	
+	<select id="setArticleTotalCount" parameterType="HashMap" resultType="int">
+	select count(*) from (
+			<foreach collection="tableList" item="item" separator="union">
+				(SELECT #{item} as tableName, title, boardno, regdate, writer, reports FROM c_board_${item}_board where reports >= 3
+								<if test="wordsList != null">
+									and
+									<foreach collection="wordsList" item="word" separator="and">
+										${searchType} like '%'||#{word}||'%'
+									</foreach>
+								</if>)
+			</foreach>	
+		)
+</select>
+
+<!-- 2020.03.31 pageMaker & pageCriteria selectArticles -->
+<select id="selectAllArticles" parameterType="HashMap" resultType="adminBoardVO">
+			select * from
+				(select row_number() over (order by regDate desc) as rnum, data.* from
+					(select * from ( 
+							<foreach collection="tableList" item="item" separator="union">
+								(SELECT #{item} as tableName, title, boardno, regdate, writer, reports FROM c_board_${item}_board where reports >= 3
+								<if test="wordsList != null">
+									and
+									<foreach collection="wordsList" item="word" separator="and">
+										${searchType} like '%'||#{word}||'%'
+									</foreach>
+								</if>)
+							</foreach>
+							)
+							
+					)
+				data)
+			where rnum between #{cri.rowStart} and #{cri.rowEnd}
+</select>
+</mapper>

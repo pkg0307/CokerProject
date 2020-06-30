@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.member">
+
+<resultMap id="memberResult" type="MemberVO">
+	<result property="userEmail" column="userEmail" />
+	<result property="userPw" column="userPw" />
+	<result property="ninkname" column="nickname" />
+	<result property="userName" column="userName" />
+	<result property="tel" column="tel" />
+	<result property="enable" column="enable" />
+	<result property="point" column="point" />
+	<result property="totalPoint" column="totalPoint" />
+	<result property="lvl" column="lvl" />
+	<result property="imgName" column="imgName" />
+</resultMap>
+
+<!-- 로그인 -->
+<select id="login" resultType="memberVO" parameterType="String">
+	<![CDATA[
+		select * from c_member where userEmail = #{userEmail}
+	]]>
+</select>
+
+<!--이미 가입된 이메일이 있는지 체크-->
+<select id="overlapEmail" parameterType="String" resultType="int">
+	select count(*) from c_member where userEmail = #{userEmail}
+</select>
+
+<!--이미 가입된 닉네임이 있는지 체크-->
+<select id="overlapNickName" parameterType="String" resultType="int">
+	select count(*) from c_member where nickname = #{nickname}
+</select>
+
+<!-- 회원 가입 -->
+<insert id="createMember" parameterType="memberVO">
+	<![CDATA[
+		insert into c_member (userEmail, userPw, nickname, userName, tel) 
+		values (#{userEmail}, #{userPw}, #{nickname}, #{userName}, #{tel})
+	]]>
+</insert>
+
+<!-- 회원 정보 수정 -->
+<update id="updateMyInfo" parameterType="java.util.Map">
+		update c_member set 
+		userPw = #{userPw}, 
+		nickname = #{nickname}, 
+		tel = #{tel} 
+		where userEmail = #{userEmail}
+</update>
+
+<!-- 회원 탈퇴 -->
+<delete id="deleteMyInfo"  parameterType="java.util.Map">
+	delete from c_member where userEmail = #{userEmail}
+</delete>
+
+<!-- 회원 정보 보기 -->
+<select id="selectMyInfo" parameterType="String" resultType="memberVO">
+    <![CDATA[
+		select * from c_member where userEmail = #{userEmail}
+   	]]>
+</select>
+
+<!-- 비밀번호 체크 -->
+<select id="passChk" parameterType="memberVO" resultType="String">
+	select userPw from c_member where userEmail=#{userEmail}
+</select>
+
+<!-- 프로필 사진 업로드 -->
+<update id="addProfileImg" parameterType="HashMap">
+	update c_member set	imgName = #{imgName} where nickname = #{nickname} 
+</update>
+
+<!-- 인터셉터 포인트 갱신 -->
+<select id="getPoint" parameterType="String" resultType="int">
+	select point from c_member where nickname = #{nickname}
+</select>
+
+<!-- 인터셉터 레벨 갱신 -->
+<select id="getLvl" parameterType="String" resultType="int">
+	select lvl from c_member where nickname = #{nickname}
+</select>
+
+<!-- 레벨 업 -->
+<update id="lvlUp" parameterType="int">
+	update c_member set lvl = floor(totalPoint/10) where nickname = #{nickname}
+</update>
+
+<!-- 인터셉터 프로필 이미지 갱신 -->
+<select id="getImgName" parameterType="String" resultType="String">
+	select imgName from c_member where nickname = #{nickname}
+</select>
+
+<select id="getNoticeTitle" resultType="String">
+	select MIN(title) as min_title from c_board_notice_board
+</select>
+
+<!-- 계정 ID(이메일) 찾기 -->
+<select id="searchUserEmail" parameterType="java.util.Map" resultType="String">
+	<![CDATA[
+		select userEmail from c_member where userName = #{userName} and tel = #{tel}
+	]]>
+</select>
+
+<!-- 계정 비번 재설정 -->
+<update id="resetPw" parameterType="java.util.Map">
+	<![CDATA[
+		update c_member set userPw = #{newPw} where userEmail = #{userEmail}
+	]]>
+</update>
+
+</mapper>

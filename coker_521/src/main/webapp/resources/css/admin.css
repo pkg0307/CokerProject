@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/*모바일 CSS*/
+.adminBoard-section{
+	width:95%;
+	margin:18px auto;
+}
+.adminBoard-section .sec-tit{
+	font-size: 20px;
+}
+.adminBoard-section .search-div, .adminBoard-section .search-div form{
+	display: flex;
+	justify-content: flex-end;
+}
+.adminBoard-section .search-div{
+	margin-top:15px;
+}
+.adminBoard-section .search-div .form-box{
+	display:flex;
+	border:1px solid lightgray;
+	height: 30px;
+}
+.adminBoard-section .search-div input, .adminBoard-section .search-div select{
+	border:0;
+	height:100%;
+}
+.adminBoard-section .resized-table{
+	font-size: 0.8rem;
+}
+.adminBoard-section .table-div{
+	margin-top:10px;
+}
+.adminBoard-section .table-div table{
+	border-top:2px solid gray;
+	border-bottom:2px solid gray;
+}
+.adminBoard-section .table-div thead tr{
+	background:#ededed;
+	border-bottom:3px double lightgray;
+}
+.adminBoard-section .table-div thead tr th{
+	padding:15px 0;
+}
+.adminBoard-section .table-div tbody tr{
+	border-bottom: 1px solid lightgray;
+}
+.adminBoard-section .table-div tbody tr td{
+	vertical-align:middle;
+	text-align:center;
+	padding:10px 0;
+}
+.adminBoard-section .table-div tbody tr:nth-child(even){
+	background:#f8f8f8;
+}
+.adminBoard-section .table-div tbody .eternalBan-tr{
+	background:#ffbbbb!important;
+}
+.adminBoard-section .table-div tbody .tempBan-tr{
+	background:#ffdbbb!important;
+}
+.adminBoard-section .table-div tbody tr .left-td{
+	text-align: left;
+}
+.adminBoard-section .pageNum-div{
+	margin-top:15px;
+	text-align: center;
+}
+.adminBoard-section .pageNum-div .info a{
+	background:#f1f1f1;
+	font-weight:bold;
+	pointer-events: none;
+	cursor: default;
+}
+.adminBoard-section .pageNum-div li{
+	padding: 0 3px;
+}
+.adminBoard-section .pageNum-div li a{
+	padding: 5px 10px;
+	border: 1px solid lightgray;
+}
+.memberDetail-section .m-divider{
+	width:200px;
+}
+.myPageMain-section .memberDetail-div input{
+	border:1px solid lightgray;
+}
+.myPageMain-section .pw-div{
+	margin:10px auto;
+	display: flex;
+	justify-content: center;
+}
+.myPageMain-section .reason-textarea{
+	width:100%;
+}
+.myPageMain-section .term-select{
+	
+}
+/* 관리자 회원 관리 */
+.myPageMain-section .enable_checkBox {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0, 0, 0); /* Fallback color */
+   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* 관리자 회원 관리 */
+.myPageMain-section .enable_checkBox .enable_check_pw {
+   background-color: #fefefe;
+   margin: auto;
+   padding: 30px 20px;
+   border: 1px solid #888;
+   width: 50%;
+   max-width:500px;
+   min-width: 280px;
+}
+.myPageMain-section .enable_checkBox .content-p{
+	line-height: 1.1;
+}
+.myPageMain-section .enable_checkBox .content-p select, .myPageMain-section .enable_checkBox .content-p option{
+	border:0;
+	font-weight: bold;
+}
+/* 관리자 회원 관리 */
+.myPageMain-section .enable_close {
+   color: #aaaaaa;
+   float: right;
+   position:relative;
+   font-size: 28px;
+   font-weight: bold;
+   top:-30px;
+   left:13px;
+}
+/* 관리자 회원 관리 */
+.myPageMain-section .enable_close:hover, .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+}
+/* 관리자 회원 관리 */
+.myPageMain-section .detail_checkBox {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0, 0, 0); /* Fallback color */
+   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* 관리자 회원 관리 */
+.myPageMain-section .detail_checkBox .detail_check_pw {
+   background-color: #fefefe;
+   margin: 0 auto;
+   padding: 30px 20px;
+   border: 1px solid #888;
+   width: 50%;
+   max-width:500px;
+   min-width: 280px;
+}
+/* 관리자 회원 관리 */
+.myPageMain-section .detail_close {
+   color: #aaaaaa;
+   float:right;
+   position:relative;
+   font-size: 28px;
+   font-weight: bold;
+   top:-30px;
+   left:13px;
+}
+/* 관리자 회원 관리 */
+.myPageMain-section .detail_close:hover, .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+}
+/*태블릿 CSS*/
+@media all and (min-width:768px){
+.myPageMain-section .enable_close{
+	font-size:35px;
+}
+.myPageMain-section .detail_close{
+	font-size:35px;
+} 
+}

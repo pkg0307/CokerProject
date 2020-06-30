@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+		
+	<definition name="/admin/admin" extends="baseLayout">
+		<put-attribute name="title" value="커뮤니티 메인페이지" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/admin.jsp" />
+	</definition>
+	<definition name="/admin/member/memberDetail" extends="baseLayout">
+		<put-attribute name="title" value="커뮤니티 회원정보상세보기" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/member/memberDetail.jsp" />
+	</definition>
+
+ 	<definition name="/admin/member/listMembers" extends="baseLayout">
+		<put-attribute name="title" value="커뮤니티 회원목록보기" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/member/memberList.jsp" />
+	</definition> 
+ 
+ 	<definition name="/admin/member/memberSearch" extends="baseLayout">
+		<put-attribute name="title" value="커뮤니티 회원검색" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/member/memberSearch.jsp" />
+	</definition> 
+	
+ 	<definition name="/admin/member/enableMemberForm" extends="baseLayout">
+		<put-attribute name="title" value="커뮤니티 회원계정설정" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/member/memberEnableForm.jsp" />
+	</definition> 
+	
+	<definition name="/admin/board/rankedMember" extends="baseLayout">
+		<put-attribute name="title" value="회원 랭킹정보" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/board/memberRankingForm.jsp" />
+	</definition>
+	<definition name="/admin/board/reportedBoardList" extends="baseLayout">
+		<put-attribute name="title" value="신고된 회원 리스트" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/board/reportedBoardList.jsp" />
+	</definition>
+ 
+ </tiles-definitions>

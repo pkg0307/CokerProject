@@ -1,0 +1,15 @@
+SSL(Http관련 서버 설정값)*추후 Https를 사용하게 된다면 파일 확장자명을 '.yml'로 변경하여 사용가능함
+server:
+  port: 8443
+  servlet:
+    session:
+      timeout: 20000
+  ssl:
+    enable: true
+    key-alias: coker
+    key-store: coker.pkcs12
+    key-store-password: '@coker'
+    key-password: '@coker'
+    trust-store: cokertrust.pkcs12
+    trust-store-password: '@coker'
+    

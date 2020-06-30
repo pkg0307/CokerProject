@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="mapper.board">
+
+<!-- 2020.03.31 pageMaker -->
+<select id="setArticleTotalCount" parameterType="HashMap" resultType="int">
+	select count(*) from ${tableName}
+		<if test="wordsList != null">
+			where
+			<foreach collection="wordsList" item="item" separator="and">
+				${searchType} like '%'||#{item}||'%'
+			</foreach>
+		</if>
+</select>
+
+<!-- 2020.03.31 pageMaker & pageCriteria selectArticles -->
+<select id="selectAllArticles" parameterType="HashMap" resultType="boardVO">
+	<choose>
+		<when test="tableName == 'c_board_service_board'">
+			select * from
+				(select rownum as rnum, data.* from
+    				(select level, data.* from
+        				(select * from c_board_service_board order by regdate desc) data
+    			start with parentNo=0
+    			connect by prior boardNo=parentNo
+    			order siblings by boardNo desc) data)
+			where rnum between #{cri.rowStart} and #{cri.rowEnd}
+		</when>
+		<otherwise>
+			select * from
+				(select row_number() over (order by regDate desc) as rnum, data.* from
+					(select * from ${tableName}
+							<if test="wordsList != null">
+								where
+								<foreach collection="wordsList" item="item" separator="and">
+									${searchType} like '%'||#{item}||'%'
+								</foreach>
+							</if>
+					)
+				data)
+			where rnum between #{cri.rowStart} and #{cri.rowEnd}
+		</otherwise>
+	</choose>
+</select>
+
+<select id="selectAllBestArticles" parameterType="HashMap" resultType="boardVO">
+	select * from
+	(select * from ${tableName} order by likes desc)
+	<![CDATA[
+		where rownum <= 5
+	]]>
+</select>
+
+<select id="selectAllReplies" resultType="replyVO" parameterType="java.util.HashMap">
+	select * from ${tableName} where boardNO=#{boardNO}	order by replyNO asc
+</select>
+
+<select id="getImgName" resultType="String" parameterType="String">
+	select imgName from c_member where nickname=#{nickname}
+</select>
+
+<select id="selectArticle" resultType="boardVO" parameterType="java.util.HashMap">
+	select * from ${tableName} where boardNO=#{boardNO}
+</select>
+
+<insert id="addArticle" parameterType="java.util.HashMap">
+	insert into ${tableName} values(#{title}, ${seqName}.nextval, #{content}, sysdate, #{nickname}
+	<choose>
+		<when test="progress != null">
+			, #{progress}
+		</when>
+		<when test="likes != null">
+			, #{likes}
+		</when>
+		<when test="parentNo != null">
+			, #{parentNo}
+		</when>
+		<when test="topic != null">
+			, #{topic}
+		</when>
+	</choose>
+	<if test="reports != null">
+		, #{reports}
+	</if>
+	)
+</insert>
+
+<delete id="removeArticle" parameterType="java.util.HashMap">
+	delete from ${boardTableName} where boardNO=#{boardNO}
+</delete>
+
+<delete id="removeReply" parameterType="java.util.HashMap">
+	delete from ${replyTableName} where boardNO=#{boardNO}
+</delete>
+
+<update id="modArticle" parameterType="java.util.HashMap">
+	update ${tableName} set
+	<if test="tableName == 'c_board_freetalk_board'">
+		topic=#{topic},
+	</if>
+	title=#{title}, content=#{content} where boardNO=#{boardNO}
+</update>
+
+
+
+
+<!-- 2020.03.25 Reply -->
+<insert id="addReply" parameterType="HashMap">
+	insert into ${tableName} values 
+	(#{reply.boardNO}, ${seqName}.nextval, #{reply.content}, sysdate, #{reply.writer}
+	<if test="progress != null">
+		, #{progress}
+	</if>
+	<if test="reports != null">
+		, #{reports}
+	</if>
+	)
+</insert>
+
+<update id="modifyReply" parameterType="HashMap">
+	update ${tableName} set content = #{reply.content} where replyNO = #{reply.replyNO}
+</update>
+
+<delete id="deleteReply" parameterType="HashMap">
+	delete from ${tableName} where replyNo = #{reply.replyNO} and boardNO = #{reply.boardNO}
+</delete>
+
+
+
+<update id="recommend" parameterType="HashMap">
+	update ${tableName} set likes=likes+1 where boardNO = #{boardNO}
+</update>
+
+<insert id="recommender" parameterType="HashMap">
+	insert into ${tableName} values(#{boardNO}, #{nickname})
+</insert>
+
+<select id="isRecommended" parameterType="HashMap" resultType="String">
+	select case when count(*) > 0 then 'yes' else 'no' end as result from ${tableName} where boardNO = #{boardNO} and nickname=#{nickname}
+</select>
+
+<update id="upPoint" parameterType="String">
+	update c_member set point=point+1, totalPoint=totalPoint+1 where nickname=#{nickname}
+</update>
+
+<update id="setArticleComplete" parameterType="HashMap">
+	update ${tableName} set progress=1 where boardNO= #{boardNO}
+</update>
+
+<update id="setReplyComplete" parameterType="HashMap">
+	update ${tableName} set progress=1 where boardNO = #{boardNO} and replyNO = #{replyNO}
+</update>
+
+<select id="selectArticlesForMain" resultType="boardVO" parameterType="String">
+	select * from (select title, regDate, boardNO, writer from ${value} order by regDate desc)
+	<![CDATA[ where rownum <= 5 ]]>
+</select>
+
+<select id="selectArticlesForMainPlusTopic" resultType="boardVO" parameterType="String">
+	select * from (select title, regDate, boardNO, writer, topic from ${value} order by regDate desc)
+	<![CDATA[ where rownum <= 5 ]]>
+</select>
+
+<select id="selectArticlesForMainPlusProgress" resultType="boardVO" parameterType="String">
+	select * from (select title, regDate, boardNO, writer, progress from ${value} order by regDate desc)
+	<![CDATA[ where rownum <= 5 ]]>
+</select>
+
+<update id="reportBoard" parameterType="HashMap">
+	update ${tableName} set reports=reports+1 where boardNO = #{boardno}
+</update>
+
+<update id="reportReply" parameterType="HashMap">
+	update ${tableName} set reports=reports+1 where boardNO = #{boardno} and replyNO = #{replyno}
+</update>
+</mapper>

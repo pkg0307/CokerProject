@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+      
+    <definition name="/member/loginForm" extends="baseLayout">
+       <put-attribute name="title" value="로그인 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/member/loginForm.jsp" />
+    </definition>
+    
+    <definition name="/member/memberForm" extends="baseLayout">
+       <put-attribute name="title" value="회원 가입 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/member/memberForm.jsp" />
+    </definition>
+      
+    <definition name="/member/myPageMain" extends="baseLayout">
+       <put-attribute name="title" value="마이페이지 메인" />
+       <put-attribute name="body" value="/WEB-INF/views/member/myPageMain.jsp" />
+    </definition>
+    
+    <definition name="/member/myInfo" extends="baseLayout">
+       <put-attribute name="title" value="내 정보 상세 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/member/myInfo.jsp" />
+    </definition>
+     
+    <definition name="/member/modifyPw" extends="baseLayout">
+       <put-attribute name="title" value="내 정보 상세 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/member/modifyPw.jsp" />
+    </definition> 
+         
+    <definition name="/member/deleteInfoForm" extends="baseLayout">
+       <put-attribute name="title" value="회원 탈퇴 페이지" />
+       <put-attribute name="body" value="/WEB-INF/views/member/deleteMemberForm.jsp" />
+    </definition>
+  
+	<definition name="/member/disableMemberForm" extends="baseLayout">
+       <put-attribute name="title" value="계정차단 안내" />
+       <put-attribute name="body" value="/WEB-INF/views/member/disableMemberForm.jsp" />
+    </definition>
+
+    <definition name="/member/uploadImageForm" extends="baseLayout">
+       <put-attribute name="title" value="프로필 이미지" />
+       <put-attribute name="body" value="/WEB-INF/views/member/uploadImageForm.jsp" />
+    </definition>
+    
+    <definition name="/member/csCenterMain" extends="baseLayout">
+		<put-attribute name="title" value="커뮤니티 고객센터 메인" />
+		<put-attribute name="body" value="/WEB-INF/views/member/csCenterMain.jsp" />
+	</definition> 
+	
+    <definition name="/member/searchUserEmailForm" extends="baseLayout">
+       <put-attribute name="title" value="계정 찾기" />
+       <put-attribute name="body" value="/WEB-INF/views/member/searchUserEmailForm.jsp" />
+    </definition>
+    
+    <definition name="/member/resetUserPwForm" extends="baseLayout">
+       <put-attribute name="title" value="계정비밀번호 재설정" />
+       <put-attribute name="body" value="/WEB-INF/views/member/resetUserPwForm.jsp" />
+    </definition>
+
+	<definition name="/member/privacy" extends="baseLayout">
+		<put-attribute name="title" value="개인정보처리방침" />
+		<put-attribute name="body" value="/WEB-INF/views/member/privacy.jsp" />
+	</definition>
+	
+	<definition name="/member/youthPolicy" extends="baseLayout">
+		<put-attribute name="title" value="청소년보호정책" />
+		<put-attribute name="body" value="/WEB-INF/views/member/youthPolicy.jsp" />
+	</definition>
+	
+	<definition name="/member/policy" extends="baseLayout">
+		<put-attribute name="title" value="이용약관" />
+		<put-attribute name="body" value="/WEB-INF/views/member/policy.jsp" />
+	</definition>
+	
+</tiles-definitions>
+
+

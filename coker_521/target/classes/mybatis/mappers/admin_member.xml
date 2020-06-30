@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="mapper.admin.member">
+	
+	<select id="listMember" resultType="memberVO" parameterType="java.util.HashMap" >
+		<![CDATA[
+			select * from c_member order by nickname desc
+		]]>
+		
+	</select>
+	<select id="memberDetail" resultType="memberVO" parameterType="String">
+		<![CDATA[
+			select * from c_member where userEmail=#{userEmail}
+		]]>
+	</select>
+	
+	<select id="selectMemberList" resultType="memberVO" parameterType="java.util.Map">
+			select * from (select row_number() over (order by nickname asc) as rnum, data.* from (select * from c_member where nickname != 'admin'
+			
+					<if test="searchCategory != '' and searchCategory != null">
+						and ${searchCategory} like '%' || #{searchWord} || '%'
+					</if>
+					) data)
+				where rnum between #{cri.rowStart} and #{cri.rowEnd} 
+	</select>
+	
+	<select id="setMemberListTotalCount" parameterType="java.util.Map" resultType="int" >
+			select count(*) from c_member where nickname != 'admin' 
+			<if test="searchWord != null">
+				and ${searchCategory} like '%' || #{searchWord} || '%'
+			</if>
+	</select>
+	
+	<update id="modifyMemberInfo" >
+		update c_member
+			<set>
+				<if test="userPw != '' and userPw != null">
+					userPw = #{userPw},
+				</if>
+				<if test="nickname != '' and nickname != null">
+					nickname = #{nickname},
+				</if>
+				<if test="userName != '' and userName != null">
+					userName = #{userName},
+				</if>
+				<if test="tel != '' and tel != null">
+					tel = #{tel}
+				</if>
+			</set>
+		where userEmail= #{userEmail}
+	</update>
+	
+	<!--이미 가입된 닉네임이 있는지 체크-->
+	<select id="overlapNickName" parameterType="String" resultType="int">
+		select count(*) from c_member where nickname = #{nickname}
+	</select>
+	
+	<!-- Admin 비밀번호 체크 -->
+	<select id="checkAdmin" resultType="int" parameterType="java.util.HashMap">
+		<![CDATA[
+			select count(*) from c_member where userEmail = #{adminId} and userPw = #{adminPw}
+		]]>
+	</select>
+	<!--Admin계정으로 회원삭제 -->
+	<delete id="deleteMember">
+		<![CDATA[
+			delete from c_member where userEmail=#{userEmail}
+		]]>
+	</delete>
+	
+	<update id="enableMember" parameterType="java.util.Map">
+			update c_member 
+			<set>
+				<if test="enable != '' and enable != null">
+					enable = #{enable},
+				</if>
+				<if test="disable_reason != '' and disable_reason != null">
+					disable_reason = #{disable_reason},
+				</if>
+				<if test="enable != '' and enable == 0">
+					disable_date = sysdate,
+				</if>
+				<if test="enable != '' and enable == 1">
+					disable_reason = null,
+					disable_date = null,
+					enable_date = null,
+				</if>
+				<if test="enable == 0 and disable_term == 7">
+					enable_date = sysdate + 7
+				</if>
+				<if test="enable == 0 and disable_term == 14">
+					enable_date = sysdate + 14
+				</if>
+				<if test="enable == 0 and disable_term == 30">
+					enable_date = sysdate + 30
+				</if>
+				<if test="enable == 0 and disable_term == 9999">
+					enable_date = null
+				</if>
+			</set>
+			where userEmail = #{userEmail} 
+	</update>
+	
+	<select id="checkEnableMember" resultType="String">
+		<![CDATA[
+			select enable from c_member where userEmail = #{userEmail} 
+		]]>
+	</select>
+		
+	<select id="checkDisMemberList" resultType="memberVO">
+		<![CDATA[
+			select * from c_member where enable = '0' and to_char(enable_date) = to_char(sysdate)
+		]]>
+	</select>
+	
+	<select id="checkServerDate" resultType="java.sql.Date">
+		<![CDATA[
+			select sysdate from DUAL
+		]]>
+	</select>
+	
+	<update id="autoEnableMember">
+			update c_member 
+			<set>
+				enable = '1',
+				disable_reason = null, 
+				disable_date = null, 
+				enable_date = null
+			</set> 
+			where userEmail = #{disUserEmail}
+	</update>
+	
+<!-- 비번 재설정 시 계정 이메일(ID)인증 -->
+	<select id="checkPwUserEmail" resultType="String">
+		<![CDATA[
+			select userEmail from c_member where userEmail = #{checkUserEmail}
+		]]>
+	</select>
+	
+	<!-- admin권한으로 회원정보 수정시 프로필 저장 디렉터리 변경시에 사용할 기존 nickname 가져오기 -->
+	<select id="getNickname" parameterType="String" resultType="String">
+		<![CDATA[
+			select nickname from c_member where userEmail = #{userEmail}
+		]]>
+	</select>
+</mapper>

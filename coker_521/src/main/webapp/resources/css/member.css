@@ -1,0 +1,453 @@
+@charset "UTF-8";
+/*모바일 CSS*/
+/*로그인*/
+.login-section{
+	width:250px;
+	margin: 100px auto;
+	text-align: center;
+}
+.login-section .sec-tit{
+	font-size:1rem;
+}
+.login-section .content-row-1{
+	margin-top:15px;
+	display: flex;
+	flex-direction: column;
+}
+.login-section .content-row-1 input{
+	border:1px solid lightgray;
+	height:30px;
+}
+.login-section .content-row-1 input:first-child{
+	border-bottom: 0;
+}
+.login-section .content-row-1 button{
+	margin-top:10px;
+	height:30px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+.login-section .content-row-2{
+	margin-top:21px;
+	display: flex;
+	justify-content: space-around;
+}
+.login-section .m-divider{
+	margin:5px auto;
+}
+.memberForm-section{
+	wdith:95%;
+	margin:18px auto;
+	text-align: center;
+}
+.memberForm-section .m-divider{
+	margin:5px auto;
+}
+.memberForm-section .sec-tit{
+	font-size:1rem;
+}
+.memberForm-section .pre-info{
+	margin:20px auto;
+	padding:5px 0;
+	border-top:1px solid lightgray;
+	border-bottom:1px solid lightgray;
+	font-size:0.65rem;
+	width:95%;
+	max-width:400px;
+	font:gray;
+	line-height: 1.1;
+}
+.memberForm-section .content-row-1{
+	margin:0 auto;
+	width:95%;
+	max-width:400px;
+	display: flex;
+	flex-direction: column;
+}
+.memberForm-section .content-row-1 p{
+	margin:10px 0 5px 0;
+	text-align: left;
+	font-weight: bold;
+}
+.memberForm-section .content-row-1 p:first-child{
+	margin-top:0;
+}
+.memberForm-section .content-row-1 input{
+	height:30px;
+	border:1px solid lightgray;
+}
+.memberForm-section .content-row-1 button{
+	height:30px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+.memberForm-section .content-row-1 .error-p{
+	margin-top:5px;
+	text-align:left;
+	font-size:0.7rem;
+	color:red;
+	font-weight: bolder;
+} 
+.memberForm-section .content-row-1 .error-p:before{
+	content: "* ";
+}
+.memberForm-section .content-row-1 .success-p{
+	margin-top:5px;
+	text-align:left;
+	font-size:0.7rem;
+	color:green;
+	font-weight: bold;
+}
+.memberForm-section .content-row-2{
+	width:95%;
+	max-width:400px;
+	margin:21px auto;
+	text-align: center;
+}
+.memberForm-section .content-row-2 input{
+	height:30px;
+	padding:0 10px;
+	background:#3f51b5;
+	border:0;
+	color:white;
+}
+.csCenterMain-section{
+	margin:18px auto;
+	width:95%;
+}
+.csCenterMain-section .sec-tit{
+	font-size: 20px;
+}
+.csCenterMain-section .con-tit{
+	font-size: 17px;
+	margin-bottom:10px;
+}
+.csCenterMain-section .divider{
+	margin:21px 0;
+}
+.csCenterMain-section .content-row-1 table tr:nth-child(odd) td{
+	background: #f8f8f8;
+	padding: 10px;
+	border-top:1px solid lightgray;
+	border-bottom:1px solid lightgray;
+}
+.csCenterMain-section .content-row-1 table tr:nth-child(odd):hover{
+	cursor: pointer;
+	font-weight: bold;
+}
+.csCenterMain-section .content-row-1 table .faq_answer{
+	display:none;
+	padding:20px;
+	font-size:0.8rem;
+	line-height: 1.2;
+}
+.csCenterMain-section .content-row-1 table .alert{
+	color:red;
+}
+.csCenterMain-section .content-row-1 table tr:last-child td{
+	padding-bottom:0;
+}
+.csCenterMain-section .content-row-3 p{
+	line-height: 1.2;
+}
+
+.csCenterMain-section .content-row-4 p{
+	line-height: 1.2;
+}
+.searchUserEmailForm-section{
+	width:95%;
+	max-width:400px;
+	margin: 100px auto;
+	text-align: center;
+}
+.searchUserEmailForm-section .form-tit{
+	margin-bottom:5px;
+}
+.searchUserEmailForm-section .sec-tit{
+	font-size: 20px;
+}
+.searchUserEmailForm-section .divider{
+	width:85%;
+	margin:0 auto;
+}
+.searchUserEmailForm-section .divider1{
+	margin-top:21px;
+}
+.searchUserEmailForm-section .divider2{
+	margin-bottom:21px;
+}
+.searchUserEmailForm-section .info-p{
+	margin-top:2px;
+	font-size:0.65em;
+	color:green;
+}
+.searchUserEmailForm-section .content-row-1 {
+	line-height: 1.3;
+}
+.searchUserEmailForm-section .content-row-1 input{
+	border:0;
+	padding:0;
+	width:200px;
+	height: 30px;
+	border:1px solid lightgray;
+}
+.searchUserEmailForm-section .content-row-1 div{
+	margin-bottom: 10px;
+}
+.searchUserEmailForm-section .content-row-1 div:first-child {
+	margin-top:10px;
+}
+.resetUserPwForm-section{
+	width:95%;
+	max-width:400px;
+	margin: 100px auto;
+	text-align: center;
+}
+
+.resetUserPwForm-section .divider{
+	width:85%;
+	margin:10px auto;
+}
+.resetUserPwForm-section .divider1{
+	margin-top:21px;
+}
+.resetUserPwForm-section .divider2{
+	margin-bottom:21px;
+}
+.resetUserPwForm-section .sec-tit{
+	font-size:20px;
+}
+.resetUserPwForm-section .form-tit{
+	margin-bottom:5px;
+}
+.resetUserPwForm-section .email-p{
+	margin-bottom: 5px;
+}
+.resetUserPwForm-section .cert-div{
+	display: flex;
+	justify-content: center;
+}
+.resetUserPwForm-section .cert-div .cert-input{
+	width:200px;
+	border:1px solid lightgray;
+}
+.resetUserPwForm-section .reset-div{
+	display:flex;
+	flex-direction:column;
+	width:280px;
+	margin: 0 auto;
+	justify-content: center;
+}
+.resetUserPwForm-section .reset-div .form-tit{
+	margin-top:10px;
+}
+.resetUserPwForm-section .reset-div .newPw{
+	border:0;
+	padding:0;
+	width:280px;
+	height: 30px;
+	border:1px solid lightgray;
+}
+.resetUserPwForm-section .reset-div .chk-btn{
+	border-left: 1px solid #004080;
+	border-right: 1px solid #004080;
+}
+.resetUserPwForm-section .reset-div .chk-btn, .resetUserPwForm-section .reset-div .userPw, .resetUserPwForm-section .reset-div .userEmail{
+	padding:0;
+	width:100%;
+}
+.resetUserPwForm-section .alert{
+	margin-top:5px;
+	font-size: 0.8rem;
+	color:red;
+}
+.resetUserPwForm-section .error{
+	font-size: 0.8rem;
+	color:red;
+}
+.resetUserPwForm-section .alert-success{
+	color:green;
+}
+.resetUserPwForm-section .info-p{
+	margin-top:2px;
+	font-size:0.65em;
+	color:green;
+}
+.resetUserPwForm-section input{
+	border:0;
+	padding:0;
+	width:280px;
+	height: 30px;
+	border:1px solid lightgray;	
+}
+.resetUserPwForm-section input:disabled{
+	color:lightgray;
+}
+.resetUserPwForm-section .btn{
+	width:auto;
+	padding:0 10px;
+}
+.policy-section{
+	width:95%;
+	margin:18px auto;
+	font-size:0.65rem;
+	line-height: 1.1;
+}
+.disableMemberForm-section{
+	width:95%;
+	margin: 100px auto;
+	text-align: center;
+}
+.disableMemberForm-section .sec-tit{
+	margin-top:15px;
+	font-size:0.8rem;
+}
+.disableMemberForm-section p{
+	margin-top:5px;
+	font-size:0.7rem;
+	line-height: 1.1;
+}
+.disableMemberForm-section .table-div{
+	max-width:300px;
+	margin:0 auto;
+	margin-top:15px;
+}
+.disableMemberForm-section .table-div table{
+	border-top:2px solid lightgray;
+	border-bottom:2px solid lightgray;
+}
+.disableMemberForm-section .table-div table tr td{
+	border-bottom:1px solid lightgray;
+	padding:5px 0;
+	font-size:0.7rem;
+	line-height: 1.1;
+}
+.disableMemberForm-section .table-div table tr td:first-child {
+	background: #f8f8f8;
+}
+.myPageMain-section{
+	width:95%;
+	margin:18px auto;
+	text-align: center;
+}
+.myPageMain-section .sec-tit{
+	font-size:1rem;
+}
+.myPageMain-section .m-divider{
+	margin:5px auto;
+}
+.myPageMain-section .profile-img{
+	width:200px;
+	height:200px;
+	border:1px solid lightgray;
+	border-radius: 50%;
+}
+.myPageMain-section .content-row-1{
+	margin-top:15px;
+}
+.myPageMain-section .content-row-1 input{
+	border:0;
+	width:80%;
+}
+.myPageMain-section .content-row-1 table{
+	max-width:500px;
+	margin:auto;
+	border-top:2px solid lightgray;
+	border-bottom:2px solid lightgray;
+}
+.myPageMain-section .content-row-1 table tr th, .myPageMain-section .content-row-1 table tr td{
+	vertical-align: middle;
+	border-bottom:1px solid lightgray;
+	padding:5px 0;
+	line-height: 1.1;
+}
+.myPageMain-section .content-row-1 table tr th{
+	background: #f8f8f8;
+}
+.myPageMain-section .content-row-2{
+	margin-top:10px;
+}
+.uploadImageForm-section{
+	width:95%;
+	margin: 18px auto;
+}
+.uploadImageForm-section label{
+	padding:2px 5px 2px 5px;
+}
+.uploadImageForm-section label:hover{
+	font-weight:bold;
+	cursor: pointer;
+}
+.uploadImageForm-section form{
+	text-align: center;
+}
+.uploadImageForm-section .m-divider{
+	margin:5px auto;
+	width:150px;
+}
+.uploadImageForm-section .divider{
+	margin:10px auto;
+	max-width:550px;
+}
+.uploadImageForm-section .content-p{
+	font-size:0.65rem;
+	line-height: 1.1;
+}
+.uploadImageForm-section .preview{
+	margin-top:10px;
+	width:300px;
+	height: 300px;
+	border:1px solid lightgray;
+	border-radius: 50%;
+}
+.uploadImageForm-section .content-row-2{
+	margin-top:10px;
+}
+
+/*태블릿 CSS*/
+@media all and (min-width:768px){
+.memberForm-section .pre-info{
+	font-size:0.8rem;
+}
+.searchUserEmailForm-section .info-p{
+	font-size:0.8rem;
+}
+.resetUserPwForm-section .info-p{
+	font-size:0.8em;
+}
+.policy-section{
+	font-size:0.8rem;
+	line-height: 1.1;
+}
+.disableMemberForm-section .sec-tit{
+	font-size:1.1rem;
+	
+}
+.disableMemberForm-section p{
+	margin-top:5px;
+	font-size:0.9rem;
+}
+.disableMemberForm-section .table-div{
+	max-width:410px;
+}
+.disableMemberForm-section .table-div table tr td{
+	font-size:0.9rem;
+}
+.myPageMain-section .profile-img{
+	width:300px;
+	height:300px;
+	border:1px solid lightgray;
+	border-radius: 50%;
+}
+.uploadImageForm-section .preview{
+	width:400px;
+	height: 400px;
+	border:1px solid lightgray;
+	border-radius: 50%;
+}
+.uploadImageForm-section .content-p{
+	font-size:0.8rem;
+}
+}
